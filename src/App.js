@@ -25,7 +25,7 @@ class App extends React.Component {
     findColor = (path) => {
       this.pathIdx += 1;
       let result = path[this.pathIdx];
-      if(this.pathIdx == 14) {this.pathIdx = 0}
+      if(this.pathIdx === 14) {this.pathIdx = 0}
       return result; 
     }
   
@@ -34,7 +34,7 @@ class App extends React.Component {
       {
         let val = Math.floor(Math.random()*4);
         console.log(val);
-        if(val == 0) {
+        if(val === 0) {
           this.matrix.push(0);    
         }
   
@@ -67,7 +67,7 @@ class App extends React.Component {
     }
   
     mazeUtil = (visited, x, y, currentPath) => {
-      if(x == 3 && y == 3) {
+      if(x === 3 && y === 3) {
         this.numPaths += 1;
         this.paths.push([...currentPath]);
         visited[15] = 0;    
